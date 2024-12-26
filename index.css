@@ -5,24 +5,24 @@
 
 :root {
   --fallTime: 2.9s;
-  --fallTime1: 4.4s;
 }
 
 #container {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 100px;
-  /* background: linear-gradient(135deg, #87CEEB, #B0E0E6, #ADD8E6);  */
-
+  background-image: url("https://freshprompts-blog-images.s3.amazonaws.com/background-drawing-ideas/space.jpg");
+  background-size: cover;
 }
 .gameCont {
-  margin-top: 30px;
+  margin-top: 10px;
   width: 1000px;
   height: 1000px;
   overflow: hidden;
   position: relative;
-  background-image: url("./background.jpg");
+  background-image: url("https://img.freepik.com/premium-photo/pale-olive-skin-abstract-creative-background-design_851755-306063.jpg?semt=ais_hybrid");
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -56,7 +56,7 @@
   position: absolute;
   bottom: 0;
   width: 60px;
-  height: 75px;
+  height: 60px;
   background-size: cover;
   z-index: 1;
   top: -100px;
@@ -67,23 +67,18 @@
 .animate {
   animation: float var(--fallTime) cubic-bezier(0.22, 0.01, 0.7, 0.24);
 }
-.animate1 {
-  animation: float1 var(--fallTime1) cubic-bezier(0.22, 0.01, 0.7, 0.24);
-}
 .apple {
-  background-image: url("./apple.png");
-  /* box-shadow: 0 0 15px rgba(231, 76, 60, 0.7); */
+  background-image: url("https://clipart-library.com/image_gallery/275592.gif");
 }
 .strawberry {
-  background-image: url("./strawberry.png");
-  /* box-shadow: 0 0 15px rgba(231, 76, 60, 0.7); */
+  background-image: url("https://forums.terraria.org/index.php?attachments/new-piskel-4-3-gif.400974/");
+  transform: rotate(-45deg);
 }
 .banana {
-  background-image: url("./banana.png");
-  /* box-shadow: 0 0 15px rgba(231, 76, 60, 0.7); */
+  background-image: url("https://media.tenor.com/iixrKkvsiIUAAAAj/ufo-green.gif");
 }
 .cherry {
-  background-image: url("./cherry.png");
+  background-image: url("https://i.giphy.com/Qs7WbYem6RDksHxd1l.webp");
 
 }
 @keyframes float {
@@ -95,22 +90,11 @@
     top: 900px;
   }
 }
-@keyframes float1 {
-  0% {
-    top: 0px;
-  }
-  50% {
-    top: 0px;
-  }
-  100% {
-    top: 900px;
-  }
-}
 
 /*Basket*/
 .basket {
-  width: 150px;
-  height: 105px;
+  width: 200px;
+  height: 140px;
   top: 1030px;
   position: absolute;
   transition: 0.1s linear;
@@ -153,8 +137,6 @@
   width: 50px;
   height: 50px;
   background-image: url("./heart.png");
-  /* box-shadow: 0 0 10px rgba(255, 59, 48, 0.6); */
-
 }
 .difficultySelector {
   margin-top: 20px;
@@ -182,7 +164,6 @@ h3{
 .pooImage {
   background-image: url("./poo.png");
 }
-/* // basket animation when score */
 
 .gameOverMessage {
   position: absolute;

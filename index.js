@@ -14,7 +14,7 @@ start.addEventListener("click", gameStart);
 
 //Basket
 const basket = document.createElement("div");
-basket.innerHTML = `<img src="basket.png" alt="Basket">`;
+basket.innerHTML = `<img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDJ5MTNwOGZubDNwcmo4aThiNXRyeGdyNDZkcmxrcWtkM2E2MTczdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/9iSlGflR0l9987MiFs/giphy.webp" alt="Basket">`;
 gameCont.appendChild(basket);
 basket.classList.add("basket");
 
@@ -120,14 +120,14 @@ function gameStart() {
   backgroundMusic.play();
 
   // basket placement
-  basket.style.top = "930px";
+  basket.style.top = "880px";
   // remove start button
   start.style.display = "none";
-
+  document.getElementById("difficultyLevel").setAttribute("disabled","disabled");
   //All fruits that will be used in game
   let apple_c = 0, cherry_c = 0, strawberry_c = 0, banana_c = 0;
   for (let i = 0; i <= 400; i++) {
-    let ri = Math.floor(Math.random() * 4);
+    let ri = Math.floor(Math.random()*4);
     switch (ri) {
       case 0:
         apple[apple_c] = document.createElement("div");
@@ -219,7 +219,7 @@ function gameStart() {
   function score_check(ran) {
     console.log(position);
     let leftEdge = position.left - 30;
-    let rightEdge = leftEdge + 150;
+    let rightEdge = leftEdge + 200;
     if (leftEdge <= ran && rightEdge >= ran) {
       score += 1;
       document.getElementById("scoreContainer").innerHTML = "score:" + score;
